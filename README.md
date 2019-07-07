@@ -46,6 +46,7 @@ Desarrollamos la solución al problema planteado usando el lenguaje python y la 
 
 El juego emplea la división de cuadrículas para el desplazamiento de los elementos, según la especificación, la interfaz resultante se observa en la Figura 1.
 
+![fig1](https://user-images.githubusercontent.com/38579765/60772861-f9b48380-a0c1-11e9-8001-458c25aeffb7.png)
 
 Figura 1: Interfaz del Juego
 
@@ -54,6 +55,8 @@ La solución se estructura en 3 clases, según se observa en la Figura 2. El est
 
 
 
+
+![fig2](https://user-images.githubusercontent.com/38579765/60772864-0e911700-a0c2-11e9-95d0-38331b1b4131.png)
 
 Figura 2: Diagrama de clases
 
@@ -67,11 +70,14 @@ En cada episodio del juego, esto es, en cada tiro de penal, se identifica el est
 
 Tras patear el balón, se aplican el conjunto de reglas previamente definidas para evaluar el reward (recompensa), producto de la acción del arquero, con el cual se actualiza la matriz de aprendizaje Q según la Ecuación 1, donde lr representa el learning rate y gamma el factor de descuento para el beneficio de estados futuros.
 
-Q(e, a) = Q(e, a) + lr x (reward + gamma x max{a}(Q(e, a))        (1)
+![form1](https://user-images.githubusercontent.com/38579765/60772888-48621d80-a0c2-11e9-9e7d-3166457e8de8.png)
+
 
 El parámetro lr influye en la sensibilidad del algoritmo a recibir nuevo conocimiento, esto es, en qué medida el algoritmo altera los patrones de comportamiento aprendidos con cada refuerzo recibido. El parámetro gamma altera la sensibilidad del algoritmo a preferir beneficios futuros por sobre beneficios inmediatos o viceversa, que ocurren como resultado de su decisión de una acción inmediata y cómo esta altera su elección de acciones futuras.
 
 
+
+![fig3](https://user-images.githubusercontent.com/38579765/60772867-194bac00-a0c2-11e9-9782-0e1eae0f5151.png)
 
 Figura 3: Funcionamiento de alto nivel
 
@@ -81,10 +87,13 @@ Figura 3: Funcionamiento de alto nivel
 
 Los parámetros learning rate (lr) y Gamma, definidos para x  {0, 1}  x  , configuran y alteran el comportamiento del proceso de aprendizaje. Con propósitos de optimización, probamos multiples configuraciones y comparamos el Puntaje obtenido como resultado de aplicar las reglas planteadas contra un número de Episodios fijo de 2000. Según se observa en la Figura 4, el puntaje más alto para el número definido de Episodios es de 26306  y ocurre para un Learning rate = 1  y  Gamma  = 0.
 
+![fig4](https://user-images.githubusercontent.com/38579765/60772870-25376e00-a0c2-11e9-86bd-3fc827d9dddc.png)
+
 Figura 4: Optimización de parámetros
 
 El uso de estos parámetros, dan como resultado una curva de aprendizaje que relaciona el número de episodios (tiros de penal) con el puntaje acumulado obtenido, según se observa en la Figura 5.
 
+![fig5](https://user-images.githubusercontent.com/38579765/60772877-308a9980-a0c2-11e9-8e26-a44095cd9dd6.png)
 
 Figura 5: Curva de aprendizaje
 
@@ -100,8 +109,7 @@ Al implementarse una red neuronal, el algoritmo tiende a “olvidar” debido al
 
 La naturaleza de la solución supone un reconocimiento del estado del juego a partir de capturas individuales de la imagen generada, por tal motivo la interfaz propuesta (Figura 6) para esta versión de la solución es mucho más simple, lo que facilita el trabajo de la red neuronal convolucional involucrada
 
-
-
+![fig6](https://user-images.githubusercontent.com/38579765/60772883-3c765b80-a0c2-11e9-8437-85285566091e.png)
 
 Figura 6: Interfaz del Juego (DQL)
 
