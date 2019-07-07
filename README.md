@@ -1,4 +1,4 @@
-<h1 align="center"> # Q-Learning-Deep-Q-Learning </h1>
+<h1 align="center">  Q-Learning & Deep-Q-Learning </h1>
 Uso de Algoritmo de Q-Learning &amp; Deep Q Learning para la resolucion del Juego Futbolin (Penales).
 
 <h3 align="center"> Proyecto Final de Machine Learning </h3>
@@ -6,9 +6,9 @@ Uso de Algoritmo de Q-Learning &amp; Deep Q Learning para la resolucion del Jueg
 <h5 align="center"> Facultad de Ingenieria, Escuela de Sistemas </h5>
 <h5 align="center"> Universidad de Cuenca </h5>
 
-# fully-justified-text
 
 ##### Resumen.- 
+
 Empleamos los algoritmos Q-Learning y Deep Q-Learning en la resolución del problema “La Final”, un pequeño juego donde un arquero de fútbol aprende, mediante aprendizaje reforzado, a atajar tiros de penal. Encontramos una configuración óptima de los parámetros influyentes del algoritmo Q-Learning para el problema particular, que logra un comportamiento libre de errores en aproximadamente 1500 episodios. Descubrimos que la solución empleando Deep Q-Learning describe una curva de aprendizaje similar, aunque incurre en un costo computacional y temporal mucho más alto a cambio de la generalización adicional que otorga.
 
 
